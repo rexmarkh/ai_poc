@@ -1,4 +1,4 @@
-import { Component, OnInit} from "@angular/core";
+import { Component, OnInit, TemplateRef , EventEmitter,Input,Output} from "@angular/core";
 import {Router} from '@angular/router';
 import "rxjs/add/operator/map";
 import { Observable } from "rxjs/Rx";
@@ -13,6 +13,8 @@ import { Content } from "../questions/content";
 })
 
 export class HomeComponent implements OnInit {
+
+  
   constructor(private fetchdataService: FetchdataService, private router: Router) {}
 
   public ngOnInit() {
@@ -20,7 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   public onSubmit() {
-    this.fetchdataService.parseJSONData(); 
     this.router.navigateByUrl('/questions');
+    // this.fetchdataService.parseJSONData(); 
   }
 }

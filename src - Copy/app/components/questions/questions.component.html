@@ -1,0 +1,25 @@
+<div>
+    <button type="button" class="btn btn-primary" (click)="getQuestions()">GetQuestions</button>
+    <button type="button" class="btn btn-primary" (click)="getSingledata()">Getsingledata</button>
+
+</div>
+<div [innerHTML]="singleData" #target>
+
+</div>
+<div class="ansoptions">
+    <div>
+        <!-- <a (click)="checkAnswer()">{{answer}}</a> -->
+        <!-- start -->
+        <fieldset class="form-group">
+            <legend>Radio buttons</legend>
+            <div class="form-check" *ngFor="let answer of optArray">
+                <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios"  id="{{questionId}}" value="{{answer}}" (click)="checkAnswer($event)">
+                {{answer}}
+              </label>
+            </div>
+
+        </fieldset>
+        <!-- end -->
+    </div>
+</div>
