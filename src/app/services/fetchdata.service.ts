@@ -70,28 +70,26 @@ export class FetchdataService {
       if(element.getQid == selectedQid){
         replaceTag = '<a class="options ' + selectedQid + '">_________</a>';
         linkTag = '<a class="options ' + selectedQid + '">'+userAnswer+'</a>';
-        console.log(replaceTag);
-        console.log(linkTag);
-        this.content.setArticle = this.content.getArticle.replace(replaceTag, linkTag);
+        document.getElementsByClassName("options")[i].innerHTML = userAnswer;
+        // this.content.setArticle = this.content.getArticle.replace(replaceTag, linkTag);
         break;
       }
     }
   }
 
-  public checkAnswer(userAnswer, selectedQid) {
-     //To be moved to Service layer
+  public checkAnswer(userAnswer, selectedQid) { 
      let questions: Array<Question> = this.content.getQuestions;
      for (let index = 0; index < questions.length; index++) {
       if(questions[index].getQid == selectedQid){
         //questions[index].getOptions indicates OPTIONS
         if(questions[index].getAnswer == userAnswer){
           console.log("Answer is correct.."); 
-          
-         this.document.querySelector(".options").style.color = 'green';;
-          
+          document.getElementsByClassName("options")[index].classList.remove("failure", "success");                 
+          document.getElementsByClassName("options")[index].classList.add("success");
         }else{
           console.log("Answer is Wrong"); 
-          this.document.querySelector(".options").style.color = 'red';;          
+          document.getElementsByClassName("options")[index].classList.remove("failure", "success");                 
+          document.getElementsByClassName("options")[index].classList.add("failure");
         }
         break;
       }

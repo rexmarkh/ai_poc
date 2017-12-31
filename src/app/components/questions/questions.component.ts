@@ -31,7 +31,10 @@ export class QuestionsComponent implements OnInit {
   }
 
   public ngAfterViewInit () {
-    this.document.querySelector(".options").addEventListener('click', ($event)=> this.displayOptions($event));
+    // this.document.querySelector(".options").addEventListener('click', ($event)=> this.displayOptions($event));
+    for (let index = 0; index < this.document.getElementsByClassName("options").length; index++) {
+      this.document.getElementsByClassName("options")[index].addEventListener('click', ($event)=> this.displayOptions($event));
+    }
   }
 
   public displayOptions(event){
