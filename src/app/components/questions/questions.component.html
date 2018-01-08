@@ -1,14 +1,14 @@
 <div class="container">
     <div [innerHTML]="articleData" #target>
     </div>
-    <div class="ansoptions">
+    <div class="ansoptions" [hidden]="!showOptions">
         <fieldset class="form-group">
             <br/>
             <div class="form-check" *ngFor="let answer of optionsList">
                 <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optionsRadios"  id="{{questionId}}" value="{{answer}}" (click)="processAnswer($event)">
-                    {{answer}}
-                </label>
+                        <input type="radio" class="form-check-input" name="optionsRadios"  id="{{questionId}}" value="{{answer}}" (click)="processAnswer($event)">
+                        {{answer}}
+                    </label>
             </div>
         </fieldset>
     </div>

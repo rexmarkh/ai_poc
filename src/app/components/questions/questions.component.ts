@@ -18,6 +18,7 @@ export class QuestionsComponent implements OnInit {
   public articleData: any;  
   public optionsList:Array<string> = [];
   public questionId:string = "";
+  public showOptions:boolean;
   //public pattern: RegExp = /<question id=(.*?)><\/question>/g;
 
   constructor(
@@ -28,6 +29,7 @@ export class QuestionsComponent implements OnInit {
 
   public ngOnInit() {
     this.articleData = this.fetchdataService.getContent().getArticle;
+    this.showOptions = false;
   }
 
   public ngAfterViewInit () {
@@ -45,6 +47,7 @@ export class QuestionsComponent implements OnInit {
       if(questions[index].getQid == currentQid){
         //questions[index].getOptions indicates OPTIONS
         this.optionsList = questions[index].getOptions;
+        this.showOptions = true;
         break;
       }
     }
