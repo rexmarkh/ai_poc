@@ -1,20 +1,175 @@
 {
-    "article": "Lorem Ipsum ho is simply dummy ho <question id=1></question> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type <question id=2></question> specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets <question id=3></question> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    "questionType": "",
+    "article": "Less than a month after Tesla unveiled a new backup power system in South Australia, the world's largest lithium-ion battery is already being put to the test.And it appears to be far exceeding expectations: In the past three weeks alone, the Hornsdale Power Reserve has smoothed out at least two major energy outages, responding even more quickly than the coal-fired backups that were supposed to provide emergency power.Tesla 's battery last week <question id=1></question> in just 0.14 seconds after one of Australia's biggest plants, the Loy Yang facility in the neighboring state of Victoria, suffered a sudden, unexplained drop in output, according to the International Business Times.And the week before that, another failure at Loy Yang prompted the Hornsdale battery to respond in as little as four seconds \u2014 or less, according to some estimates \u2014 beating other plants to the punch.State officials have called the response time \u201ca record,\u201d according to local media.The effectiveness of Tesla 's battery is being closely watched in a region that <question id=2></question> in the grips of an energy crisis.The price of electricity is soaring in Australia , particularly in the state of South Australia , where a 2016 outage <question id=3></question> 1.7 million residents <question id=4></question> power in a blackout.Storms and heat waves have caused additional outages , and many Australians <question id=5></question> for more with the onset of summer in the Southern Hemisphere.The Hornsdale battery system , which uses the same energy - storage tech found in Tesla 's electric cars , <question id=6></question> one of chief executive Elon Musk 's newest projects.In March, Musk, who is known for setting high goals and only sometimes meeting them, vowed on Twitter to deliver a battery system for South Australia's struggling grid within 100 days or it would be free.By early July , the state had signed a deal with Tesla and the French - based energy company Neoen <question id=7></question> the battery.And by Dec.1 , South Australia announced that it <question id=8></question> on the Hornsdale battery.Fed by wind turbines at the nearby Hornsdale wind farm, the battery stores excess energy that is produced when the demand for electricity isn't peaking.It can power up to 30,000 homes, though only for short periods \u2014 meaning that the battery must still be supported by traditional power plants in the event of a long outage.A spokesman for Tesla didn't immediately respond to a request for comment.Nonetheless, the Hornsdale reserve has already shown that it can provide what's known as \u201ccontingency\u201d service \u2014 keeping the grid stable in a crisis and easing what would otherwise be a significant power failure.And, more important, the project is the biggest proof-of-concept yet that batteries such as Tesla's can help mitigate one of renewable energy's most persistent problems: how to use it when the sun isn't shining or the wind isn't blowing.\" When you think about energy storage , it 's not a [ power ] generation resource , \" said Stephen Coughlin , the vice president of energy storage platforms at the Arlington - based AES Corporation , which <question id=9></question> behind several battery projects in California , the Netherlands and several other countries.\"What it's really doing is providing a much-needed injection of reliability and resiliency into the network overall.\" Where it can take as much as 10 minutes to spin up a traditional turbine in a pinch, added Coughlin, it's not uncommon to see systems such as Tesla's intervene in fractions of a second.This <question id=10></question> n't Musk 's only experiment with large - scale batteries.Last year, Tesla said it had equipped a small island in American Samoa with thousands of solar panels and batteries that could serve the area's 600 inhabitants, shifting them almost entirely off fossil fuels.In October, Musk responded to the hurricane crisis in Puerto Rico by offering to discuss building a solar grid for the island.Parts of Puerto Rico are still without power , months after Hurricane Maria <question id=11></question> down power lines and other energy infrastructure.An electric grid consisting of distributed solar panels, paired with a large battery, could prove transformative for some island economies, analysts say.Under normal circumstances, the price of imported fossil fuels can become a drain on local businesses.But the abundant sunshine at tropical latitudes <question id=12></question> solar energy extremely cost - efficient.\" [ Big batteries ] definitely can be a game changer for island or island - type economies , \" <question id=13></question> Ravi Manghani , director of energy storage at GTM Research , a market analysis firm.\" Hawaii , for instance , <question id=14></question> one of the highest retail rates in the U.S.[for electricity], and that's because of the cost of shipping diesel or other fuel oils which currently are used by a lot of the existing facilities.\" What's more, he added, spreading solar panels out across an island reduces the likelihood of the entire grid going down because of storms.Other battery projects, including in the United States, have already helped manage spikes in demand.For example, a major 2015 gas leak near Los Angeles that kept some gas-fired plants from producing energy at peak times prompted Southern California Edison and San Diego Gas and Electric to announce energy storage projects that were completed earlier this year, according to Sam Wilkinson, an industry analyst at IHS.In an April report , Wilkinson <question id=15></question> the rapid rise of China and Australia as energy storage leaders.\" For the first time Asia accounts for more than one third of the global pipeline \" for energy storage , the report <question id=16></question>.\" This underscores the importance that China , Australia , South Korea and India are all predicted <question id=17></question> in the global market.\".",
+    "questionType": "verb",
     "questions": [{
             "id": "1",
-            "options": ["answer1_1", "answer1_2", "answer1_3", "answer1_4"],
-            "answer": "answer1_2"
+            "options": [
+                "has kicked",
+                "had kicked",
+                "kick",
+                "kicked"
+            ],
+            "answer": "kicked"
         },
         {
             "id": "2",
-            "options": ["answer2_1", "answer2_2", "answer2_3", "answer2_4"],
-            "answer": "answer2_1"
+            "options": [
+                "will be",
+                "have been",
+                "is",
+                "is being"
+            ],
+            "answer": "is"
         },
         {
             "id": "3",
-            "options": ["answer3_1", "answer3_2", "answer3_3", "answer3_4"],
-            "answer": "answer3_4"
+            "options": [
+                "had led",
+                "has led",
+                "lead",
+                "led"
+            ],
+            "answer": "led"
+        },
+        {
+            "id": "4",
+            "options": [
+                "lose",
+                "losing",
+                "to lose",
+                "to losing"
+            ],
+            "answer": "to lose"
+        },
+        {
+            "id": "5",
+            "options": [
+                "have been bracing",
+                "were bracing",
+                "are bracing",
+                "brace"
+            ],
+            "answer": "are bracing"
+        },
+        {
+            "id": "6",
+            "options": [
+                "is",
+                "has been",
+                "is being",
+                "will be"
+            ],
+            "answer": "is"
+        },
+        {
+            "id": "7",
+            "options": [
+                "to producing",
+                "producing",
+                "to produce",
+                "produce"
+            ],
+            "answer": "to produce"
+        },
+        {
+            "id": "8",
+            "options": [
+                "had switched",
+                "switched",
+                "has been switching",
+                "has switched"
+            ],
+            "answer": "had switched"
+        },
+        {
+            "id": "9",
+            "options": [
+                "have been",
+                "will be",
+                "is being",
+                "is"
+            ],
+            "answer": "is"
+        },
+        {
+            "id": "10",
+            "options": [
+                "will be",
+                "is",
+                "have been",
+                "is being"
+            ],
+            "answer": "is"
+        },
+        {
+            "id": "11",
+            "options": [
+                "had ripped",
+                "ripped",
+                "has ripped",
+                "rip"
+            ],
+            "answer": "ripped"
+        },
+        {
+            "id": "12",
+            "options": [
+                "will make",
+                "has made",
+                "is making",
+                "makes"
+            ],
+            "answer": "makes"
+        },
+        {
+            "id": "13",
+            "options": [
+                "say",
+                "said",
+                "has said",
+                "had said"
+            ],
+            "answer": "said"
+        },
+        {
+            "id": "14",
+            "options": [
+                "has",
+                "has had",
+                "is having",
+                "has have"
+            ],
+            "answer": "has"
+        },
+        {
+            "id": "15",
+            "options": [
+                "highlighted",
+                "highlight",
+                "has highlighted",
+                "had highlighted"
+            ],
+            "answer": "highlighted"
+        },
+        {
+            "id": "16",
+            "options": [
+                "read",
+                "read",
+                "had read",
+                "has read"
+            ],
+            "answer": "read"
+        },
+        {
+            "id": "17",
+            "options": [
+                "have",
+                "to having",
+                "to have",
+                "having"
+            ],
+            "answer": "to have"
         }
     ]
 }
