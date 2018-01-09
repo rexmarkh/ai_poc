@@ -9,14 +9,18 @@ import { Question } from "../components/questions/question";
 export class FetchdataService {
   public data: any = [];
   private content = new Content();
-  private baseUrl = "./assets/data/ai.json";
+  private baseUrl = "http://localhost/api/?url=";
+  public contentUrl = "";
+  public quesType:Array<string> =[];
+  // private apiUrl:string = this.baseUrl + this.contentUrl+"&type=" + this.quesType;
 
-  constructor(private http: Http,@Inject(DOCUMENT) private document) {}
+  constructor(private http: Http,@Inject(DOCUMENT) private document) {
+  }
   
   ngOnInit() {}
 
   fetchData() {
-    return this.http.get(this.baseUrl).map((res: Response) => {
+    return this.http.get(this.baseUrl + this.contentUrl+"&type=" + this.quesType).map((res: Response) => {
       return res.json();
     });
   }
@@ -43,7 +47,8 @@ export class FetchdataService {
       }
       question.setOptions = optionsList;
       questionsList.push(question);
-    }
+    }   
+       
     this.content.setQuestions = questionsList;
     this.content.setArticle = data.article;
     this.content.setQuestionType = data.questionType;

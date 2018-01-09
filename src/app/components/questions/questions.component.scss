@@ -2,14 +2,27 @@
     position: relative;
 }
 
-.ansoptions {
-    margin: 20px 0 80px;
-    background-color: #efefef;
-    padding: 5px;
-    opacity: 1;
-    transition: visibility 1s linear 300ms, opacity 300ms;
-    .form-check {
-        display: inline !important;
+.ansBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    .ansoptions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #efefef;
         padding: 5px;
+        opacity: 1;
+        transition: visibility 1s linear 300ms, opacity 300ms;
+        .form-check {
+            display: inline !important;
+            padding: 5px;
+        }
     }
 }

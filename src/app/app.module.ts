@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Custom Modules
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -11,10 +12,10 @@ import { NgxBootstrapModule } from './modules/ngx-bootstrap.module'
 import { AppComponent } from './app.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { HomeComponent } from './components/home/home.component';
-
-//
-import { FetchdataService } from './services/fetchdata.service';
 import { QuestionsComponent } from './components/questions/questions.component';
+
+//Services
+import { FetchdataService } from './services/fetchdata.service';
 import { QuestionPipePipe } from './components/questions/question-pipe.pipe';
 
 @NgModule({
@@ -29,7 +30,9 @@ import { QuestionPipePipe } from './components/questions/question-pipe.pipe';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    NgxBootstrapModule
+    NgxBootstrapModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     FetchdataService

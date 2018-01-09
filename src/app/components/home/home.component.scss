@@ -1,0 +1,66 @@
+.questype {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    p {
+        padding-right: 10px;
+    }
+    .form-group>input[type="checkbox"] {
+        display: none;
+    }
+    .form-group {
+        padding-right: 10px;
+    }
+    .form-group>label {
+        cursor: pointer;
+        height: 0px;
+        position: relative;
+        width: 40px;
+        left: 5px;
+    }
+    .form-group>label::before {
+        background: rgb(0, 0, 0);
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        content: '';
+        height: 14px;
+        margin-top: -4px;
+        position: absolute;
+        opacity: 0.3;
+        transition: all 0.4s ease-in-out;
+        width: 30px;
+    }
+    .form-group>label::after {
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        content: '';
+        height: 18px;
+        left: -4px;
+        margin-top: -2px;
+        position: absolute;
+        top: -4px;
+        transition: all 0.3s ease-in-out;
+        width: 18px;
+    }
+    .form-group>input[type="checkbox"]:checked+label::before {
+        background: inherit;
+        opacity: 0.5;
+    }
+    .form-group>input[type="checkbox"]:checked+label::after {
+        background: inherit;
+        left: 15px;
+    }
+}
+
+.noofques {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    label {
+        width: 130px;
+    }
+    select.form-control {
+        width: 55px !important;
+    }
+}

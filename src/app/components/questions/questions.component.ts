@@ -34,11 +34,18 @@ export class QuestionsComponent implements OnInit {
 
   public ngAfterViewInit () {
     // this.document.querySelector(".options").addEventListener('click', ($event)=> this.displayOptions($event));
+    
     for (let index = 0; index < this.document.getElementsByClassName("options").length; index++) {
+      let a = this.document.getElementsByTagName("a")[index];
+      a.setAttribute("dropdownToggle","");
+      a.setAttribute("aria-haspopup","true");
+      a.setAttribute("aria-expanded","false");      
+      // let att = document.createAttribute("dropdownToggle");
+      // att.value = "";
+      // a.setAttributeNode(att);
       this.document.getElementsByClassName("options")[index].addEventListener('click', ($event)=> this.displayOptions($event));
     }
   }
-
   public displayOptions(event){
     let currentQid = event.target.className.split(" ")[1];
     let questions: Array<Question>  = this.fetchdataService.getContent().getQuestions;
@@ -60,5 +67,6 @@ export class QuestionsComponent implements OnInit {
     this.fetchdataService.setUserAnswer(userAnswer, selectedQid);
     this.fetchdataService.checkAnswer(userAnswer, selectedQid);    
     this.articleData = this.fetchdataService.getContent().getArticle;
+        this.showOptions = false;
   }
 }

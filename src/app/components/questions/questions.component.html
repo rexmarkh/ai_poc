@@ -1,32 +1,33 @@
 <div class="container">
     <div [innerHTML]="articleData" #target>
     </div>
-    <div class="ansoptions" [hidden]="!showOptions">
-        <fieldset class="form-group">
-            <br/>
-            <div class="form-check" *ngFor="let answer of optionsList">
+    <div class="ansBg" [hidden]="!showOptions">
+        <div class="ansoptions">
+            <fieldset class="form-group">
+                <br/>
+                <div class="form-check" *ngFor="let answer of optionsList">
+                    <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios"  id="{{questionId}}" value="{{answer}}" (click)="processAnswer($event)">
+                                    {{answer}}
+                                </label>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- <div class="main_content" dropdown>
+
+    <a dropdownToggle class="dropdown-toggle">Button dropdown</a>
+    <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem" *ngFor="let answer of optionsList">
+            <div class="form-check">
                 <label class="form-check-label">
                         <input type="radio" class="form-check-input" name="optionsRadios"  id="{{questionId}}" value="{{answer}}" (click)="processAnswer($event)">
                         {{answer}}
                     </label>
             </div>
-        </fieldset>
-    </div>
-</div>
-<!-- <div class="btn-group" dropdown>
-
-    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
-              Button dropdown <span class="caret"></span>
-            </button>
-    <ul *dropdownMenu class="dropdown-menu" role="menu">
-        <li role="menuitem" *ngFor="let answer of optionsList">
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optionsRadios"  id="{{questionId}}" value="{{answer}}" (click)="processAnswer($event)">
-                    {{answer}}
-                </label>
-            </div>
         </li>
-
     </ul>
+    <div [innerHTML]="articleData" #target>
+    </div>
 </div> -->
