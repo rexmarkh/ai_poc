@@ -2,6 +2,7 @@ import { Injectable, Inject } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { DOCUMENT } from '@angular/common';
 import "rxjs/add/operator/map";
+import {Router} from '@angular/router';
 import { Content } from "../components/questions/content";
 import { Question } from "../components/questions/question";
 
@@ -10,27 +11,27 @@ export class FetchdataService {
   public data: any = [];
   private content = new Content();
   private baseUrl = "http://localhost/api/?url=";
-  public contentUrl = "";
   public quesType:Array<string> =[];
-  // private apiUrl:string = this.baseUrl + this.contentUrl+"&type=" + this.quesType;
+  private apiUrl:string = "";
 
-  constructor(private http: Http,@Inject(DOCUMENT) private document) {
+  constructor(private http: Http,@Inject(DOCUMENT) private document, private router: Router) {
   }
   
   ngOnInit() {}
 
   fetchData() {
-    return this.http.get(this.baseUrl + this.contentUrl+"&type=" + this.quesType).map((res: Response) => {
+    return this.http.get(this.apiUrl).map((res: Response) => {
       return res.json();
     });
   }
 
-  setData() {
+  setData(contentUrl){
+    this.apiUrl = this.baseUrl + contentUrl+"&type=";
     return this.fetchData().subscribe(data => {
       this.data = data;
+      this.parseJSONData();
     });
   }
-
   public parseJSONData() {
     let question;
     let optionsList: Array<string>;
@@ -53,6 +54,7 @@ export class FetchdataService {
     this.content.setArticle = data.article;
     this.content.setQuestionType = data.questionType;
     this.modifyContent();
+    this.router.navigateByUrl('/questions');
     return this.content;
   }
 
@@ -88,12 +90,10 @@ export class FetchdataService {
       if(questions[index].getQid == selectedQid){
         //questions[index].getOptions indicates OPTIONS
         if(questions[index].getAnswer == userAnswer){
-          console.log("Answer is correct.."); 
-          document.getElementsByClassName("options")[index].classList.remove("failure", "success");                 
+          document.getElementsByClassName("options")[index].classList.remove("failure", "success");
           document.getElementsByClassName("options")[index].classList.add("success");
         }else{
-          console.log("Answer is Wrong"); 
-          document.getElementsByClassName("options")[index].classList.remove("failure", "success");                 
+          document.getElementsByClassName("options")[index].classList.remove("failure", "success");
           document.getElementsByClassName("options")[index].classList.add("failure");
         }
         break;

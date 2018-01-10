@@ -1,8 +1,5 @@
 import { Component, OnInit, Inject} from "@angular/core";
-import { Router } from "@angular/router";
 import { DOCUMENT } from '@angular/common';
-import { Observable } from "rxjs/Rx";
-import "rxjs/add/operator/map";
 import { FetchdataService } from "../../services/fetchdata.service";
 import { Content } from "./content";
 import { Question } from "../questions/question";
@@ -23,7 +20,6 @@ export class QuestionsComponent implements OnInit {
 
   constructor(
     private fetchdataService: FetchdataService,
-    private router: Router,
     @Inject(DOCUMENT) private document    
   ) {}
 
@@ -32,17 +28,8 @@ export class QuestionsComponent implements OnInit {
     this.showOptions = false;
   }
 
-  public ngAfterViewInit () {
-    // this.document.querySelector(".options").addEventListener('click', ($event)=> this.displayOptions($event));
-    
+  public ngAfterViewInit () {    
     for (let index = 0; index < this.document.getElementsByClassName("options").length; index++) {
-      let a = this.document.getElementsByTagName("a")[index];
-      a.setAttribute("dropdownToggle","");
-      a.setAttribute("aria-haspopup","true");
-      a.setAttribute("aria-expanded","false");      
-      // let att = document.createAttribute("dropdownToggle");
-      // att.value = "";
-      // a.setAttributeNode(att);
       this.document.getElementsByClassName("options")[index].addEventListener('click', ($event)=> this.displayOptions($event));
     }
   }
@@ -67,6 +54,6 @@ export class QuestionsComponent implements OnInit {
     this.fetchdataService.setUserAnswer(userAnswer, selectedQid);
     this.fetchdataService.checkAnswer(userAnswer, selectedQid);    
     this.articleData = this.fetchdataService.getContent().getArticle;
-        this.showOptions = false;
+    this.showOptions = false;
   }
 }
