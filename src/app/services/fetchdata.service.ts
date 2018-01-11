@@ -10,7 +10,7 @@ import { Question } from "../components/questions/question";
 export class FetchdataService {
   public data: any = [];
   private content = new Content();
-  private baseUrl = "http://localhost/api?url=";
+  private baseUrl = "http://127.0.0.1:5000/?url=";
   public quesType:Array<string> =[];
   private apiUrl:string = "";
   // private questypeUrl = "&type=";
