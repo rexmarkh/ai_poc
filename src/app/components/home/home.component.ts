@@ -12,10 +12,13 @@ import { Content } from "../questions/content";
 
 export class HomeComponent implements OnInit {
   public rForm: FormGroup;
-  public urlValue;
+  questypes:Array<string> = ['verb', 'preposition', 'determinant'];
   constructor(private fetchdataService: FetchdataService, private fb: FormBuilder) {
     this.rForm = fb.group({
-      'url' : [null, Validators.required]
+      'url' : [null, Validators.required],
+      'verb' : [false],
+      'preposition' : [false],
+      'determinant' : [false]
     });
   }
 
@@ -23,6 +26,9 @@ export class HomeComponent implements OnInit {
   }
   
   public onSubmit(post) {
-    this.fetchdataService.setData(post.url);       
+    // console.log(post.url, post.verb, post.preposition, post.determinant);
+    // this.fetchdataService.setData(post.url);       
+    
+    this.fetchdataService.setData(post.url, post.verb, post.preposition, post.determinant);       
   }
 }

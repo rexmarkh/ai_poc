@@ -9,7 +9,7 @@
     </div>
     <div class="questype">
         <p>Select Questions Type : </p>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <input id="verb" name="someSwitchOption001" type="checkbox" value="verb" />
             <label for="verb" class="badge-primary"></label>Verb
         </div>
@@ -20,6 +20,10 @@
         <div class="form-group">
             <input id="determinant" name="someSwitchOption003" type="checkbox" value="determinant" />
             <label for="determinant" class="badge-primary"></label>Determinant
+        </div> -->
+        <div class="form-group" *ngFor="let type of questypes">
+            <input id="{{type}}" formControlName="{{type}}" type="checkbox" value="{{type}}" />
+            <label for="{{type}}" class="badge-primary"></label>{{type}}
         </div>
     </div>
 

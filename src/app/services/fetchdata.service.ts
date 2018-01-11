@@ -10,10 +10,10 @@ import { Question } from "../components/questions/question";
 export class FetchdataService {
   public data: any = [];
   private content = new Content();
-  private baseUrl = "http://my-server.com/?url=";
+  private baseUrl = "http://localhost/api?url=";
   public quesType:Array<string> =[];
   private apiUrl:string = "";
-
+  // private questypeUrl = "&type=";
   constructor(private http: Http,@Inject(DOCUMENT) private document, private router: Router) {
   }
   
@@ -25,8 +25,30 @@ export class FetchdataService {
     });
   }
 
-  setData(contentUrl){
-    this.apiUrl = this.baseUrl + contentUrl+"&type=";
+  setData(contentUrl, verb, preposition, determinant){
+    let types="";
+    if(verb)
+    {
+      verb = "verb";
+      types += "verb";
+    }
+    if(preposition)
+    {
+      preposition = "preposition";
+      if(verb)
+      types += "-preposition";
+      else
+      types+="preposition";
+    }
+    if(determinant)
+    {
+      determinant = "determinant";
+      if(verb||preposition)
+      types +="-determinant";
+      else
+      types+="determinant"
+    }
+    this.apiUrl = this.baseUrl+contentUrl+"&type="+types;
     return this.fetchData().subscribe(data => {
       this.data = data;
       this.parseJSONData();
