@@ -1,7 +1,7 @@
 # Guidelines to setup the project:
 
-1.  Download and install Git from "https://git-scm.com/downloads"
-2.  Download and install Node from "https://nodejs.org/en/download/"
+1.  Download and install Git from `https://git-scm.com/downloads`
+2.  Download and install Node from `https://nodejs.org/en/download`
 2.1.Just make sure that you have installed the right versions of Node & NPM by using the below            commands:
         -> `node -v` (8.9.4)
         -> `npm -v` (5.6.0)
