@@ -13,7 +13,6 @@ export class FetchdataService {
   private baseUrl = "http://127.0.0.1:5000/?url=";
   public quesType:Array<string> =[];
   private apiUrl:string = "";
-  // private questypeUrl = "&type=";
   constructor(private http: Http,@Inject(DOCUMENT) private document, private router: Router) {
   }
   
